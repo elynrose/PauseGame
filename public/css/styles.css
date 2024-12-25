@@ -1,0 +1,121 @@
+.bangers-regular {
+    font-family: "Bangers", serif;
+    font-weight: 400;
+    font-style: normal;
+      }
+
+
+
+  #score-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1000;
+  }
+
+  #counters-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1000;
+  }
+
+  .card-stack {
+    position: relative;
+    width: 400px;
+    max-width: 400px;
+    height: 80%;
+  }
+
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .card video {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .card:not(:last-child) {
+    transform: scale(0.9);
+    opacity: 0.8;
+    z-index: -1;
+  }
+
+  /* Win and Missed Classes */
+  .card.missed {
+    pointer-events: none;
+    background-color: rgba(255, 0, 0, 0.9); /* Red overlay */
+    transform: scale(0.95);
+  }
+
+  .card.win {
+    pointer-events: none;
+    background-color: rgba(0, 255, 0, 0.9); /* Green overlay */
+    transform: scale(0.95);
+  }
+
+  /* Swipe Animations */
+  .card.swipe-right {
+    transform: translateX(100%) rotate(15deg);
+    opacity: 0;
+  }
+
+  .card.swipe-left {
+    transform: translateX(-100%) rotate(-15deg);
+    opacity: 0;
+  }
+  
+ .card:nth-last-child(2) {
+transform: rotate(6deg);
+}
+#gameOver {
+  text-align: center;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  z-index: 1000;
+  }
+  
+      /* Reset Button */
+      .reset-button {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+}
